@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d0c">
+  <title>未来之家｜3D 漫游</title>
+</head>
+<body>
+<div id="app">
+  <canvas id="villa-canvas" aria-label="未来之家三维场景"></canvas>
+
+  <div class="loading" id="loading" role="status" aria-live="polite">
+    <div class="loading-mark" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <p id="loading-label">正在载入未来之家</p>
+    <div class="loading-track"><span id="loading-progress"></span></div>
+  </div>
+
+  <header class="topbar">
+    <div class="identity">
+      <span class="seal" aria-hidden="true">宅</span>
+      <div>
+        <h1>未来之家</h1>
+        <p>新中式院落别墅</p>
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <div class="segmented" aria-label="浏览模式">
+        <button class="segment is-active" type="button" data-mode="tour">
+          <i data-lucide="compass"></i><span>导览</span>
+        </button>
+        <button class="segment" type="button" data-mode="walk">
+          <i data-lucide="footprints"></i><span>漫游</span>
+        </button>
+      </div>
+      <button class="icon-button" id="fullscreen-button" type="button" aria-label="全屏" title="全屏">
+        <i data-lucide="maximize"></i>
+      </button>
+    </div>
+  </header>
+
+  <nav class="location-rail" aria-label="空间导览">
+    <button type="button" class="location is-active" data-view="aerial">
+      <span class="location-index">01</span><span>全景</span>
+    </button>
+    <button type="button" class="location" data-view="entrance">
+      <span class="location-index">02</span><span>门楼</span>
+    </button>
+    <button type="button" class="location" data-view="courtyard">
+      <span class="location-index">03</span><span>水院</span>
+    </button>
+    <button type="button" class="location" data-view="hall">
+      <span class="location-index">04</span><span>大堂</span>
+    </button>
+    <button type="button" class="location" data-view="garden">
+      <span class="location-index">05</span><span>后园</span>
+    </button>
+  </nav>
+
+  <aside class="place-panel" id="place-panel">
+    <span class="eyebrow" id="place-eyebrow">四象总图</span>
+    <h2 id="place-title">全院鸟瞰</h2>
+    <p id="place-copy">南向入院，前水后山，左右廊院围合成完整生活场域。</p>
+    <dl>
+      <div><dt>基地</dt><dd>42 × 34 m</dd></div>
+      <div><dt>建筑</dt><dd>约 710㎡</dd></div>
+    </dl>
+  </aside>
+
+  <div class="environment" aria-label="光照环境">
+    <button type="button" class="time-button" data-time="dawn" aria-label="清晨" title="清晨">
+      <i data-lucide="sunrise"></i>
+    </button>
+    <button type="button" class="time-button is-active" data-time="day" aria-label="日间" title="日间">
+      <i data-lucide="sun"></i>
+    </button>
+    <button type="button" class="time-button" data-time="dusk" aria-label="黄昏" title="黄昏">
+      <i data-lucide="sunset"></i>
+    </button>
+    <button type="button" class="time-button" data-time="night" aria-label="夜景" title="夜景">
+      <i data-lucide="moon"></i>
+    </button>
+  </div>
+
+  <button class="walk-entry" id="walk-entry" type="button">
+    <i data-lucide="move-3d"></i><span>进入漫游</span>
+  </button>
+
+  <div class="crosshair" id="crosshair" aria-hidden="true"></div>
+
+  <footer class="statusbar">
+    <span id="status-text">全景导览</span>
+    <span class="status-divider"></span>
+    <span id="time-text">日间</span>
+  </footer>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

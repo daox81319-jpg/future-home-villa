@@ -1,0 +1,67 @@
+{
+  "project": "Future Home Villa",
+  "version": "1.0",
+  "units": "meters",
+  "site": {
+    "width": 42.0,
+    "depth": 34.0,
+    "estimated_floor_area_sqm": 710
+  },
+  "source_scene": {
+    "objects": 1189,
+    "meshes": 1125,
+    "triangles_before_modifiers": 32338,
+    "materials": 58,
+    "collections": 10,
+    "cameras": 6,
+    "lights": 15,
+    "bounds_min": [-21.11, -17.62, -1.193],
+    "bounds_max": [21.11, 17.0, 9.45]
+  },
+  "glb_roundtrip": {
+    "objects": 1192,
+    "meshes": 1129,
+    "triangles": 93424,
+    "missing_required_nodes": []
+  },
+  "room_markers": [
+    "ROOM_Dining",
+    "ROOM_FamilyGallery",
+    "ROOM_GuestSuiteEast",
+    "ROOM_GuestSuiteWest",
+    "ROOM_Kitchen",
+    "ROOM_LivingHall",
+    "ROOM_MasterSuite",
+    "ROOM_MeditationPavilion",
+    "ROOM_Study",
+    "ROOM_TeaRoom"
+  ],
+  "required_assets": [
+    "SITE_Base",
+    "MAIN_GroundSlab",
+    "ROOF_Main",
+    "ROOF_WestWing",
+    "ROOF_EastWing",
+    "ROOF_Gate",
+    "COURT_ScreenWall",
+    "LAND_LotusPond_Water",
+    "GARDEN_MoonGate",
+    "WATER_BackPool",
+    "HALL_Sofa",
+    "MASTER_Bed",
+    "DINING_TableTop",
+    "KITCHEN_Island"
+  ],
+  "deliverables": {
+    "blend": "assets/blender/future_home_villa.blend",
+    "glb": "exports/future_home_villa.glb",
+    "renders": [
+      "renders/01_aerial.png",
+      "renders/02_entrance.png",
+      "renders/03_living_hall.png",
+      "renders/04_back_garden.png",
+      "renders/05_ground_floor_plan.png",
+      "renders/06_back_garden_overview.png"
+    ]
+  }
+}

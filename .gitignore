@@ -1,0 +1,6 @@
+.DS_Store
+dist/
+viewer/node_modules/
+viewer/dist/
+*.blend1
+*.log
